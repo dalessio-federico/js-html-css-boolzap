@@ -17,6 +17,8 @@ var app = new Vue(
         lastData : 0,
 
         message :"",
+
+        srcValue : "",
         
         user :
         {
@@ -155,6 +157,23 @@ var app = new Vue(
                             setTimeout(() => this.contacts[this.buddyIndex].messages.push(recivedMessage) ,1000)
                             
                             this.message = "";
+                        },
+        filterContact : function()
+                        {
+                            this.contacts.forEach((e) => 
+                            {
+                                var src = this.srcValue.toLowerCase()
+                                var name = e.name.toLowerCase()
+                                if(name.includes(src))
+                                {
+                                    e.visible = true;
+                                }
+                                else
+                                {
+                                    e.visible = false;
+                                }
+                            });
+                            this.srcValue = "";
                         }
     }
 });
