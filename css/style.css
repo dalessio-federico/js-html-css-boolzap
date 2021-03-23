@@ -254,13 +254,13 @@ a i:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 40px 50px;
+    padding: 40px 25px;
     overflow: auto;
     background-image: url(../img/mine.jpg);
 }
 
 .text {
-    width: 40%;
+    width: 45%;
     margin: 5px;
     display: flex;
     flex-direction: column;

@@ -77,7 +77,7 @@
                     <a href="#"><i class="far fa-smile"></i></a>
                 </div>
                 <div class="send_text">
-                    <input type="text" placeholder="Scrivi Messaggio">
+                    <input type="text" placeholder="Scrivi Messaggio" @keyup.enter="sendMessagge" v-model="message">
                 </div>
                 <div class="vocal">
                     <a href="#"><i class="fas fa-microphone"></i></a>

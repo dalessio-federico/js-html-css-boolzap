@@ -14,6 +14,8 @@ var app = new Vue(
 
         notificationStatus : "attiva",
 
+        message :"",
+
         user :
         {
             name: 'UserName',
@@ -122,7 +124,22 @@ var app = new Vue(
                                     this.bell = "fas fa-bell"
                                     this.notificationStatus = "disattiva"
                                 }
-                            }
+                            },
+        
+        sendMessagge : function()
+                        {
+                            var newMessage =
+                            {
+                                date: "",
+                                text: this.message,
+                                status: "sent"
+                            };
+
+                            this.contacts[this.buddyIndex].messages.push(newMessage);
+
+                            this.message = "";
+                            console.log(this.contacts[this.buddyIndex].messages);
+                        }
     }
 });
 
