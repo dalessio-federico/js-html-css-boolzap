@@ -8,6 +8,8 @@ var app = new Vue(
         
         imgSrcLast : ".jpg",
 
+        buddyIndex : 0,
+
         user :
         {
             name: 'UserName',
@@ -104,7 +106,10 @@ var app = new Vue(
     },
     methods : 
     {
-        
+        // changeBuddy : function()
+        //                 {
+        //                     buddyIndex = index;
+        //                 }
     }
 });
 
