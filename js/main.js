@@ -23,7 +23,7 @@ var app = new Vue(
         user :
         {
             name: 'UserName',
-            avatar: '_io',
+            avatar: '_4',
             visible: true,
         },
 
@@ -97,7 +97,7 @@ var app = new Vue(
             },
             {
                 name: 'Luisa',
-                avatar: '_4',
+                avatar: '_io',
                 visible: true,
                 messages: [
                     {
@@ -145,10 +145,20 @@ var app = new Vue(
                                 status: "sent"
                             };
 
+
+                            var answer = 
+                            [
+                                "Ok",
+                                "Forse",
+                                "Daje Forte",
+                                "Lo sai che rispondo Casualmente?",
+                                "32"
+                            ]
+
                             var recivedMessage =
                             {
                                 date: currentDate.getDate() + '/' + currentDate.getMonth() + '/' + currentDate.getYear() + "  " + currentDate.getHours() + ":" + minutes_with_leading_zeros(currentDate) + ":" + currentDate.getSeconds(),
-                                text: "ok",
+                                text: answer[rndNumb(0, answer.length-1)],
                                 status: "received"
                             };
 
@@ -157,6 +167,11 @@ var app = new Vue(
                             setTimeout(() => this.contacts[this.buddyIndex].messages.push(recivedMessage) ,1000)
                             
                             this.message = "";
+
+                            function rndNumb(min, max)
+                            {
+                                return Math.floor(Math.random() * (max - min + 1) ) + min;
+                            }
                         },
         filterContact : function()
                         {
