@@ -3,3 +3,110 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* impostazioni body */
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-image: linear-gradient(#009688 0vh, #009688 15vh, #dddbd1 15vh, #d8dbd5 100%);
+}
+/* FIne impostazioni body */
+
+/* Impostazioni wrapper */
+.wrapper {
+    height: 95%;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #ffffff;
+}
+/* fine impostazioni wrapper */
+
+/* impostazioni left_container */
+
+/* impostazioni generali */
+.left_container {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+/* fine impostazioni generali */
+
+/* impostazioni header */
+.left_header {
+    width: 100%;
+    height: 10%;
+    background-color: #eaeaea;
+    border-right: 1px solid  #d1d1d1;
+}
+/* fine impostazioni header */
+
+/* impostazioni notification */
+.notification {
+    width: 100%;
+    height: 11%;
+    background-color: #8edafc;
+}
+/* fine impostazioni notification */
+
+/* impostazioni src_bar */
+.src_bar {
+    width: 100%;
+    height: 5%;
+    background-color: #fafafa;
+}
+/* fine impostazioni src_bar */
+
+/* impostazioni contacts_list */
+.contacts_list {
+    width: 100%;
+    height: 74%;
+    overflow: auto;
+}
+/* fine impostazioni conctacts_list */
+/* fine impostazioni left_container */
+
+/* impostazioni rigth_container */
+/* impostazioni generali*/
+.rigth_container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #eaeaea;
+}
+/* fine impostazioni generali */
+
+/* impostazioni header */
+.header_rigth {
+    width: 100%;
+    height: 10%;
+    background-color: #eaeaea;
+} 
+/* fine impostazioni header */
+
+/* impostazioni message_box */
+.message_box {
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+    background-image: url(../img/mine.jpg);
+}
+/* fine impostazioni message_box */
+
+/* impostazioni message_form */
+.message_form {
+    width: 100%;
+    height: 10%;
+    background-color: #f3eeea;
+}
+/* fine impostazioni message_form */
+/* fine impostazioni rigth_container */
