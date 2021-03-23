@@ -88,9 +88,37 @@ body {
 
 /* impostazioni notification */
 .notification {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
     width: 100%;
     height: 11%;
     background-color: #8edafc;
+}
+
+.notification .circle_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+}
+.notification .circle_image i {
+    font-size: 20px;
+    color: #8edafc;
+}
+
+.notification_text {
+    padding: 0 12px;
+}
+.notification_text p {
+    font-size: 14px;
+}
+.notification_text a {
+    font-size: 12px;
+    color: #626262;
 }
 /* fine impostazioni notification */
 
