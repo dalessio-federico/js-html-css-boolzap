@@ -41,7 +41,7 @@
                 <input type="text" placeholder="Cerca o Inizia una nuova chat">
             </div>
             <div class="contacts_list">
-                <div class="contact" v-for="(e,index) in contacts" @click="buddyIndex = index">
+                <div class="contact" v-for="(e,index) in contacts" @click="buddyIndex = index ">
                     <div class="contact_img">
                         <img :src="imgSrcPrew + e.avatar + imgSrcLast" alt="avatar" class="circle_image">
                     </div>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="message_buddy_info">
                         <p>{{contacts[buddyIndex].name}}</p>
-                        <p class="small">Ultimo messaggio inviato alle</p>
+                        <p class="small">Ultimo messaggio inviato alle {{contacts[buddyIndex].messages[0].date}}</p>
                     </div>
                 </div>
                 <div class="message_buddy_utility">

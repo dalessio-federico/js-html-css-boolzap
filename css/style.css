@@ -24,6 +24,7 @@ body {
 
 a i:hover {
     color: black;
+    cursor: pointer;
 }
 
 .small {
@@ -215,16 +216,15 @@ a i:hover {
 
 .message_buddy {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     height: 100%;
-    width: 25%;
     font-size: 14px;
 }
 
 .message_buddy_img{
     height: 50px;
     width: 50px;
+    margin-right: 10px;
 }
 
 .message_buddy_img img {

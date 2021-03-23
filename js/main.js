@@ -14,8 +14,10 @@ var app = new Vue(
 
         notificationStatus : "attiva",
 
-        message :"",
+        lastData : 0,
 
+        message :"",
+        
         user :
         {
             name: 'UserName',
@@ -108,7 +110,7 @@ var app = new Vue(
                     }
                 ],
             },
-        ]
+        ],
     },
     methods : 
     {
@@ -125,20 +127,34 @@ var app = new Vue(
                                     this.notificationStatus = "disattiva"
                                 }
                             },
-        
+
         sendMessagge : function()
                         {
+                            const currentDate = new Date();
+                            function minutes_with_leading_zeros(currentDate) 
+                            { 
+                                return (currentDate.getMinutes() < 10 ? '0' : '') + currentDate.getMinutes();
+                            }
+
                             var newMessage =
                             {
-                                date: "",
+                                date: currentDate.getDate() + '/' + currentDate.getMonth() + '/' + currentDate.getYear() + "  " + currentDate.getHours() + ":" + minutes_with_leading_zeros(currentDate) + ":" + currentDate.getSeconds(),
                                 text: this.message,
                                 status: "sent"
                             };
 
+                            var recivedMessage =
+                            {
+                                date: currentDate.getDate() + '/' + currentDate.getMonth() + '/' + currentDate.getYear() + "  " + currentDate.getHours() + ":" + minutes_with_leading_zeros(currentDate) + ":" + currentDate.getSeconds(),
+                                text: "ok",
+                                status: "received"
+                            };
+
                             this.contacts[this.buddyIndex].messages.push(newMessage);
 
+                            setTimeout(() => this.contacts[this.buddyIndex].messages.push(recivedMessage) ,1000)
+                            
                             this.message = "";
-                            console.log(this.contacts[this.buddyIndex].messages);
                         }
     }
 });
