@@ -29,11 +29,11 @@
             </div>
             <div class="notification">
                 <div class="circle_image">
-                    <i class="fas fa-bell-slash"></i>
+                    <i :class="bell"></i>
                 </div>
                 <div class="notification_text">
                     <p>Ricevi Notifiche di Nuovi Messaggi</p>
-                    <a href="#">attiva notifiche desktop</a>
+                    <a href="#" @click="activeNotification">{{notificationStatus}} notifiche desktop</a>
                 </div>
             </div>
             <div class="src_bar">
@@ -67,37 +67,10 @@
                 </div>
             </div>
             <div class="message_box">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, reprehenderit eum? Unde expedita deleniti facere quam harum, error assumenda quisquam, ad, inventore autem quae fugit sapiente officiis ab repellat aliquam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus molestiae iure voluptatum voluptatibus. Deserunt vero sapiente, esse accusamus aliquid in itaque. Nihil, asperiores facilis magni veniam rem veritatis! Atque.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, perferendis! Modi eos tempore voluptates, quis saepe, beatae ea voluptatum eum pariatur est animi ipsa rerum quos commodi aut obcaecati at!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquid eligendi dolor porro culpa omnis rem beatae vel officiis ipsam quaerat obcaecati nostrum impedit ex dolore aperiam, sed eaque deserunt!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate, aut iste esse maiores perferendis, dolor commodi temporibus quibusdam obcaecati, rerum natus architecto veniam facilis ipsam tenetur aliquid sed enim.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quibusdam similique eveniet id perspiciatis est optio quod minima fugit, et magni harum quam accusamus, tenetur iure nihil reprehenderit? Soluta, eaque.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, reprehenderit eum? Unde expedita deleniti facere quam harum, error assumenda quisquam, ad, inventore autem quae fugit sapiente officiis ab repellat aliquam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus molestiae iure voluptatum voluptatibus. Deserunt vero sapiente, esse accusamus aliquid in itaque. Nihil, asperiores facilis magni veniam rem veritatis! Atque.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, perferendis! Modi eos tempore voluptates, quis saepe, beatae ea voluptatum eum pariatur est animi ipsa rerum quos commodi aut obcaecati at!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquid eligendi dolor porro culpa omnis rem beatae vel officiis ipsam quaerat obcaecati nostrum impedit ex dolore aperiam, sed eaque deserunt!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate, aut iste esse maiores perferendis, dolor commodi temporibus quibusdam obcaecati, rerum natus architecto veniam facilis ipsam tenetur aliquid sed enim.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quibusdam similique eveniet id perspiciatis est optio quod minima fugit, et magni harum quam accusamus, tenetur iure nihil reprehenderit? Soluta, eaque.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, reprehenderit eum? Unde expedita deleniti facere quam harum, error assumenda quisquam, ad, inventore autem quae fugit sapiente officiis ab repellat aliquam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus molestiae iure voluptatum voluptatibus. Deserunt vero sapiente, esse accusamus aliquid in itaque. Nihil, asperiores facilis magni veniam rem veritatis! Atque.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, perferendis! Modi eos tempore voluptates, quis saepe, beatae ea voluptatum eum pariatur est animi ipsa rerum quos commodi aut obcaecati at!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquid eligendi dolor porro culpa omnis rem beatae vel officiis ipsam quaerat obcaecati nostrum impedit ex dolore aperiam, sed eaque deserunt!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate, aut iste esse maiores perferendis, dolor commodi temporibus quibusdam obcaecati, rerum natus architecto veniam facilis ipsam tenetur aliquid sed enim.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quibusdam similique eveniet id perspiciatis est optio quod minima fugit, et magni harum quam accusamus, tenetur iure nihil reprehenderit? Soluta, eaque.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, reprehenderit eum? Unde expedita deleniti facere quam harum, error assumenda quisquam, ad, inventore autem quae fugit sapiente officiis ab repellat aliquam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus molestiae iure voluptatum voluptatibus. Deserunt vero sapiente, esse accusamus aliquid in itaque. Nihil, asperiores facilis magni veniam rem veritatis! Atque.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, perferendis! Modi eos tempore voluptates, quis saepe, beatae ea voluptatum eum pariatur est animi ipsa rerum quos commodi aut obcaecati at!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquid eligendi dolor porro culpa omnis rem beatae vel officiis ipsam quaerat obcaecati nostrum impedit ex dolore aperiam, sed eaque deserunt!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate, aut iste esse maiores perferendis, dolor commodi temporibus quibusdam obcaecati, rerum natus architecto veniam facilis ipsam tenetur aliquid sed enim.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quibusdam similique eveniet id perspiciatis est optio quod minima fugit, et magni harum quam accusamus, tenetur iure nihil reprehenderit? Soluta, eaque.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, reprehenderit eum? Unde expedita deleniti facere quam harum, error assumenda quisquam, ad, inventore autem quae fugit sapiente officiis ab repellat aliquam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus molestiae iure voluptatum voluptatibus. Deserunt vero sapiente, esse accusamus aliquid in itaque. Nihil, asperiores facilis magni veniam rem veritatis! Atque.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, perferendis! Modi eos tempore voluptates, quis saepe, beatae ea voluptatum eum pariatur est animi ipsa rerum quos commodi aut obcaecati at!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquid eligendi dolor porro culpa omnis rem beatae vel officiis ipsam quaerat obcaecati nostrum impedit ex dolore aperiam, sed eaque deserunt!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate, aut iste esse maiores perferendis, dolor commodi temporibus quibusdam obcaecati, rerum natus architecto veniam facilis ipsam tenetur aliquid sed enim.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quibusdam similique eveniet id perspiciatis est optio quod minima fugit, et magni harum quam accusamus, tenetur iure nihil reprehenderit? Soluta, eaque.
-                </p>
+                <div class="text" v-for="(e,index) in contacts[buddyIndex].messages" :class="e.status">
+                    <p>{{e.text}}</p>
+                    <p class="small date">{{e.date}}</p>
+                </div>
             </div>
             <div class="message_form">
                 <div class="emoji">

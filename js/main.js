@@ -10,6 +10,10 @@ var app = new Vue(
 
         buddyIndex : 0,
 
+        bell : 'fas fa-bell-slash',
+
+        notificationStatus : "attiva",
+
         user :
         {
             name: 'UserName',
@@ -106,10 +110,19 @@ var app = new Vue(
     },
     methods : 
     {
-        // changeBuddy : function()
-        //                 {
-        //                     buddyIndex = index;
-        //                 }
+        activeNotification : function()
+                            {
+                                if(this.bell == "fas fa-bell")
+                                {
+                                    this.bell = "fas fa-bell-slash"
+                                    this.notificationStatus = "attiva"
+                                }
+                                else if (this.bell == "fas fa-bell-slash")
+                                {
+                                    this.bell = "fas fa-bell"
+                                    this.notificationStatus = "disattiva"
+                                }
+                            }
     }
 });
 
