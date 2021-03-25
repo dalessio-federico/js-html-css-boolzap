@@ -34,8 +34,10 @@ a i:hover {
 
 /* Impostazioni wrapper */
 .wrapper {
+    margin: auto;
     height: 95%;
     width: 80%;
+    min-width: 900px;
     display: flex;
     justify-content: flex-start;
     background-color: #ffffff;
@@ -179,7 +181,9 @@ a i:hover {
     display: none;
 }
 
-
+.active_contact {
+    background-color: #a29f9f;
+}
 
 .contact:hover {
     background-color: #e9ebeb;

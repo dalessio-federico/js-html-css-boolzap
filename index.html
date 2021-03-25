@@ -41,7 +41,7 @@
                 <input type="text"  v-model="srcValue" placeholder="Cerca o Inizia una nuova chat" @keydown.enter="filterContact">
             </div>
             <div class="contacts_list">
-                <div class="contact" v-for="(e,index) in contacts" @click="buddyIndex = index " :class="(e.visible == false)?'invisible': null">
+                <div class="contact" v-for="(e,index) in contacts" @click="buddyIndex = index " :class="(e.visible == false)?'invisible' : (index == buddyIndex)? 'active_contact' : null">
                     <div class="contact_img">
                         <img :src="imgSrcPrew + e.avatar + imgSrcLast" alt="avatar" class="circle_image">
                     </div>

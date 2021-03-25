@@ -1,3 +1,5 @@
+Vue.config.devtools = true;
+
 var app = new Vue(
 {
     el : "#app",
@@ -16,13 +18,14 @@ var app = new Vue(
 
         lastData : 0,
 
+
         message :"",
 
         srcValue : "",
         
         user :
         {
-            name: 'UserName',
+            name: 'Utonto',
             avatar: '_4',
             visible: true,
         },
@@ -113,7 +116,16 @@ var app = new Vue(
                 ],
             },
         ],
+
+
     },
+
+    updated : function()
+    {
+        let element = document.getElementsByClassName("text");
+        element[element.length-1].scrollIntoView({block : "start", inline : "nearest" ,behavior: "smooth" });
+    },
+
     methods : 
     {
         activeNotification : function()
@@ -140,11 +152,16 @@ var app = new Vue(
 
                             var newMessage =
                             {
-                                date: currentDate.getDate() + '/' + currentDate.getMonth() + '/' + currentDate.getYear() + "  " + currentDate.getHours() + ":" + minutes_with_leading_zeros(currentDate) + ":" + currentDate.getSeconds(),
+                                date: currentDate.getDate() + '/' + currentDate.getMonth() + '/' + currentDate.getFullYear() + "  " + currentDate.getHours() + ":" + minutes_with_leading_zeros(currentDate) + ":" + currentDate.getSeconds(),
                                 text: this.message,
                                 status: "sent"
                             };
 
+                            this.contacts[this.buddyIndex].messages.push(newMessage);
+
+                            
+
+                            
 
                             var answer = 
                             [
@@ -152,26 +169,33 @@ var app = new Vue(
                                 "Forse",
                                 "Daje Forte",
                                 "Lo sai che rispondo Casualmente?",
-                                "32"
-                            ]
+                                "32",
+                                "Si",
+                                "No",
+                                "Davvero?",
+                                "Impossibile!",
+                                "Konami ti Odio"
+                            ];
 
                             var recivedMessage =
                             {
-                                date: currentDate.getDate() + '/' + currentDate.getMonth() + '/' + currentDate.getYear() + "  " + currentDate.getHours() + ":" + minutes_with_leading_zeros(currentDate) + ":" + currentDate.getSeconds(),
-                                text: answer[rndNumb(0, answer.length-1)],
-                                status: "received"
+                                date: currentDate.getDate() + '/' + currentDate.getMonth() + '/' + currentDate.getFullYear() + "  " + currentDate.getHours() + ":" + minutes_with_leading_zeros(currentDate) + ":" + currentDate.getSeconds(),
+                                text: (newMessage.text == "konami")?answer[answer.length-1] : answer[rndNumb(0, answer.length-1)],
+                                status : "received"
                             };
 
-                            this.contacts[this.buddyIndex].messages.push(newMessage);
+                            setTimeout(() => 
+                            {
+                                this.contacts[this.buddyIndex].messages.push(recivedMessage);
+                                
+                            },1000);
 
-                            setTimeout(() => this.contacts[this.buddyIndex].messages.push(recivedMessage) ,1000)
-                            
                             this.message = "";
 
                             function rndNumb(min, max)
                             {
                                 return Math.floor(Math.random() * (max - min + 1) ) + min;
-                            }
+                            };
                         },
         filterContact : function()
                         {
@@ -189,7 +213,6 @@ var app = new Vue(
                                 }
                             });
                             this.srcValue = "";
-                        }
+                        },
     }
 });
-
